@@ -8,7 +8,7 @@ export default function GlobalError({ error, reset }) {
   }, [error]);
 
   return (
-    <html>
+    <div>
       <div className="items-center pt-20  h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white text-center px-6">
         {/* Floating emoji */}
         <div className="text-5xl animate-bounce mb-4">💫 Err0R...</div>
@@ -45,6 +45,6 @@ export default function GlobalError({ error, reset }) {
           If this keeps happening, please refresh or contact support.
         </p>
       </div>
-    </html>
+    </div>
   );
 }

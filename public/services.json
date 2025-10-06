@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "image": "https://www.globalcareercounsellor.com/blog/wp-content/uploads/2024/04/Career-Counselling-2.png",
+    "name": "Career Counseling Session",
+    "category": "Online",
+    "description": "Personalized one-on-one guidance to help you discover your strengths, interests, and ideal career path.",
+    "price": "$40",
+    "duration": "05-12-24 | 5:00 PM - 6:00 PM",
+    "counselor": "Dr. Sarah Johnson",
+    "rating": 4.9
+  },
+  {
+    "id": 2,
+    "image": "https://img.freepik.com/free-vector/recruitment-concept-illustration_23-2148621466.jpg",
+    "name": "Resume Review",
+    "category": "Online",
+    "description": "A professional review session to optimize your resume and make it stand out to employers.",
+    "price": "$25",
+    "duration": "07-12-24 | 4:00 PM - 4:30 PM",
+    "counselor": "Mr. Kevin Parker",
+    "rating": 4.8
+  },
+  {
+    "id": 3,
+    "image": "https://img.freepik.com/premium-photo/interview-preparation-paper-officemans-hand-through-magnifying-glass-illustrate-business-concept-multicolor-modern-line-illustration-doodle-style_226262-1549.jpg",
+    "name": "Interview Preparation Workshop",
+    "category": "Group Session",
+    "description": "Interactive group sessions to boost your confidence and prepare for real-world interviews.",
+    "price": "$30",
+    "duration": "10-12-24 | 3:00 PM - 5:00 PM",
+    "counselor": "Ms. Lisa Brown",
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJkoev0V6NEtFlpm5kA00WSAL30dZgPwARpw&s.png",
+    "name": "LinkedIn Profile Optimization",
+    "category": "Online",
+    "description": "Enhance your LinkedIn presence and learn to attract recruiters with an optimized profile.",
+    "price": "$20",
+    "duration": "15-12-24 | 6:00 PM - 7:00 PM",
+    "counselor": "John Doe",
+    "rating": 4.6
+  },
+  {
+    "id": 5,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUyxqRFjlRO8eEGav6-bilek9jmHDeOhZwJA&s.png",
+    "name": "Career Switch Consultation",
+    "category": "Offline",
+    "description": "For professionals planning a career switch — get insights and a practical roadmap from experts.",
+    "price": "$45",
+    "duration": "20-12-24 | 2:00 PM - 3:00 PM",
+    "counselor": "Dr. Amanda White",
+    "rating": 4.9
+  },
+  {
+    "id": 6,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ZwYVZuWFmYhG8XFPLqKt7vrWAAwr2cqT4g&s.png",
+    "name": "Personality Assessment Session",
+    "category": "Online",
+    "description": "Explore your personality traits and how they align with your potential career paths.",
+    "price": "$35",
+    "duration": "25-12-24 | 4:00 PM - 5:00 PM",
+    "counselor": "Dr. Michael Lee",
+    "rating": 4.8
+  },
+  {
+    "id": 7,
+    "image": "https://img.freepik.com/free-vector/jobs-concept-design_24908-61428.jpg",
+    "name": "Mock HR Interview",
+    "category": "Offline",
+    "description": "Practice HR-style interviews and receive constructive feedback to improve performance.",
+    "price": "$40",
+    "duration": "28-12-24 | 1:00 PM - 2:00 PM",
+    "counselor": "Ms. Clara Evans",
+    "rating": 4.7
+  },
+  {
+    "id": 8,
+    "image": "https://img.freepik.com/free-vector/ambition-abstract-concept-illustration-business-ambition-determination-setting-big-goal-making-fast-career-self-confident-getting-what-you-want-desire-success_335657-33.jpg",
+    "name": "Career Growth Mentorship",
+    "category": "Hybrid",
+    "description": "Ongoing mentorship with monthly check-ins and personalized career strategy planning.",
+    "price": "$60",
+    "duration": "05-01-25 | 7:00 PM - 8:30 PM",
+    "counselor": "Mr. James Carter",
+    "rating": 5.0
+  }
+]
