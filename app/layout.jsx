@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../components/homepage/Navbar";
 import Footer from "@/components/homepage/Footer";
+import { AuthProvider } from "@/lib/AuthContext";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,19 +9,20 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html>
       <body>
-        <div className="">
-          <Navbar></Navbar>
-        </div>
+        <AuthProvider>
+          <div className="">
+            <Navbar></Navbar>
+          </div>
 
-        <div>{children}</div>
+          <div>{children}</div>
 
-        <div>
-          <Footer></Footer>
-        </div>
+          <div>
+            <Footer></Footer>
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );
