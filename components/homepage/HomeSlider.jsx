@@ -70,9 +70,9 @@ export default function HomeSlider() {
                 <p className="text-base md:text-lg text-gray-200 font-light drop-shadow-md mb-5">
                   {s.desc}
                 </p>
-                <button className="btn btn-sm md:btn-md bg-gradient-to-r from-blue-600 to-purple-600 border-none text-white hover:scale-105 hover:shadow-lg transition-transform">
+                {/* <button className="btn btn-sm md:btn-md bg-gradient-to-r from-blue-600 to-purple-600 border-none text-white hover:scale-105 hover:shadow-lg transition-transform">
                   Learn More
-                </button>
+                </button> */}
               </div>
             </div>
           </SwiperSlide>
