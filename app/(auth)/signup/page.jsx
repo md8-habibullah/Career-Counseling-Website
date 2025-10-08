@@ -1,12 +1,19 @@
 "use client";
 import React, { useState } from "react";
 import { auth } from "@/lib/__firebase_init";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
 import { useContext } from "react";
 import AuthContext from "@/lib/AuthContext";
 import { useRouter } from "next/navigation";
 
 const Signup = () => {
+  const provider = new GoogleAuthProvider();
+
   const router = useRouter();
   const RedirectType = { replace: "replace", push: "push" };
   const [email, setEmail] = useState("");
@@ -15,7 +22,18 @@ const Signup = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const {login, logout, user} = useContext(AuthContext);
+  const { login, logout, user } = useContext(AuthContext);
+
+  const handleLoginByGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      login(result.user); // result.user has name, email, photoURL, etc.
+      console.log(result.user);
+      router.push("/profile");
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
 
   const handleSignup = async () => {
     setError("");
@@ -41,7 +59,7 @@ const Signup = () => {
       console.log("User:", userCredential.user);
       login(userCredential.user);
       // Redirect or show success message here
-      router.push ('/profile', RedirectType.push);
+      router.push("/profile", RedirectType.push);
     } catch (err) {
       console.error("Signup error:", err);
       setError(err.message);
@@ -103,6 +121,14 @@ const Signup = () => {
               Log In
             </span>
           </p>
+          {/* signup by google */}
+          <div className="divider">OR</div>
+          <button
+            className="btn btn-outline btn-secondary w-full"
+            onClick={handleLoginByGoogle}
+          >
+            Continue with Google
+          </button>
         </div>
       </div>
     </div>

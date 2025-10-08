@@ -19,12 +19,8 @@ const Navbar = () => {
       {/* Navbar Start */}
       <div className="navbar-start">
         {/* Mobile Dropdown */}
-        <div className="dropdown">
-          <button
-            tabIndex={0}
-            className="btn btn-ghost lg:hidden"
-            aria-label="menu"
-          >
+        <div className="dropdown lg:hidden">
+          <button tabIndex={0} className="btn btn-ghost" aria-label="Open Menu">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -43,7 +39,7 @@ const Navbar = () => {
 
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-lg"
           >
             {Object.entries(items).map(([key, value]) => (
               <li key={key}>
@@ -88,13 +84,15 @@ const Navbar = () => {
           </>
         ) : (
           <div className="dropdown dropdown-end flex items-center space-x-2">
-            <p>{user.email}</p>
+            <p className="hidden lg:block">{user.displayName || user.email}</p>
 
             {/* Avatar */}
             <div
               tabIndex={0}
               role="button"
               className="btn btn-ghost btn-circle avatar"
+              aria-haspopup="true"
+              aria-controls="user-menu"
             >
               <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                 <img
@@ -109,8 +107,9 @@ const Navbar = () => {
 
             {/* Dropdown Content */}
             <ul
+              id="user-menu"
               tabIndex={0}
-              className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              className="mt-3 p-2 shadow-lg menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
               <li>
                 <Link href="/profile">Profile</Link>
@@ -119,7 +118,10 @@ const Navbar = () => {
                 <Link href="/dashboard">Dashboard</Link>
               </li>
               <li>
-                <button onClick={logout} className="text-error font-semibold">
+                <button
+                  onClick={logout}
+                  className="text-error font-semibold w-full text-left"
+                >
                   Logout
                 </button>
               </li>
