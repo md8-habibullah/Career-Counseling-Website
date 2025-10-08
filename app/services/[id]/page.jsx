@@ -7,6 +7,7 @@ import {
   FaUser,
   FaTag,
 } from "react-icons/fa";
+import BookNowBtn from "@/components/services/BookNowBtn";
 
 const Page = ({ params }) => {
   const serviceId = parseInt(params.id, 10);
@@ -66,9 +67,11 @@ const Page = ({ params }) => {
 
           <p className="text-gray-300 text-lg">{service.description}</p>
 
-          <button className="btn btn-primary mt-4 hover:scale-105 transition-transform duration-300">
-            Book Now
-          </button>
+          {/* <button classN  ame="btn btn-primary mt-4 hover:scale-105 transition-transform duration-300"> */}
+
+          {/* Open the modal using document.getElementById('ID').showModal() method */}
+          <BookNowBtn text="Book Now" name={service.name} counselor={service.counselor}></BookNowBtn>
+          {/* </button> */}
         </div>
       </div>
     </div>
