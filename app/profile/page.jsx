@@ -31,16 +31,16 @@ const Profile = () => {
               </div>
             </div>
 
-            <h2 className="text-2xl font-semibold text-neutral mb-2">
+            <h2 className="text-4xl font-semibold underline mb-2">
               {user.displayName ? `Welcome, ${user.displayName}` : "Welcome!"}
             </h2>
-            <p className="text-lg text-gray-600 mb-1">Email: <span className="font-medium">{user.email}</span></p>
+            <p className="text-lg text-gray-400 underline mb-1">Email: <span className="font-medium">{user.email}</span></p>
             {user.phoneNumber && (
-              <p className="text-lg text-gray-600 mb-1">Phone: <span className="font-medium">{user.phoneNumber}</span></p>
+              <p className="text-lg text-gray-400 underline mb-1">Phone: <span className="font-medium">{user.phoneNumber}</span></p>
             )}
-            <p className="text-lg text-gray-600 mb-1">User ID: <span className="font-medium">{user.uid}</span></p>
-            <p className="text-lg text-gray-600 mb-1">Account Created: <span className="font-medium">{new Date(user.metadata?.creationTime).toLocaleString()}</span></p>
-            <p className="text-lg text-gray-600 mb-4">Last Sign In: <span className="font-medium">{new Date(user.metadata?.lastSignInTime).toLocaleString()}</span></p>
+            <p className="text-lg text-gray-400 mb-1">User ID: <span className="font-medium">{user.uid}</span></p>
+            <p className="text-lg text-gray-400 italic   mb-1">Account Created: <span className="font-medium">{new Date(user.metadata?.creationTime).toLocaleString()}</span></p>
+            <p className="text-lg text-gray-400 italic mb-4">Last Sign In: <span className="font-medium">{new Date(user.metadata?.lastSignInTime).toLocaleString()}</span></p>
 
             <button className="btn btn-error w-full text-lg" onClick={handleLogout}>
               Log Out
